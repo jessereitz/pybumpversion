@@ -1,0 +1,11 @@
+name: 'PyBumpVersion'
+description: 'Bump the version of a Python project'
+inputs:
+  version-file:
+    description: 'File in which to search and bump version'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.version-file }}
